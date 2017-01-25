@@ -1,0 +1,26 @@
+Main Menu
+    Save/Load
+    About
+    Options
+    Play
+        Galaxy Gen
+            Simulation
+            Civilization
+                Ship/Station
+        Map Viewer
+            Filters
+                Science
+                Business
+                Social
+                Combat
+        Ship/Station Interface
+        Object Viewer
+        Business Manager
+            Map filter
+            Property Spreadsheet (like df's unit list)
+            Resource Spreadsheet? (each resource shows you a list of locations where you have it/how much is there)
+        Understanding Web
+        Tech Tree
+        Design Catalog
+        Contact Book
+            Admins and other civilizations

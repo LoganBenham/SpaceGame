@@ -1,0 +1,20 @@
+General Procedures:
+	Design structure for gui
+		1 program for the actual game..
+		..pass in pygame.screen and pygame.rect objects to display..
+		..other programs interfaced by game..
+		..each has a main() to test with standalone..
+			map viewer
+			ship/station interface
+			main menu
+			map gen details
+			misc object view
+
+Specific next things to work on
+    DONE Fix bug where mapping a star and exiting to parent map crashes
+    DONE Context Menu Class
+    DONE Display space and time scales
+    DONE Sub-Menus
+    Rework and finish station/ship
+    Build stations and ships with right click menu
+    Implement ship movement options

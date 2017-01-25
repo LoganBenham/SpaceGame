@@ -1,0 +1,15 @@
+Understanding Web
+Tech Tree
+Ships
+Stations
+Designs
+    Lists
+    Ships
+    Stations
+Planets
+Resources
+    Update from ships/stations/planets
+Explored Places
+    Exploration Levels
+Contacts
+AI

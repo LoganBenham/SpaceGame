@@ -1,0 +1,103 @@
+weapons, shields, and sensors are sized
+ships have immutable slots for components
+ship slots can't be bigger than ship size
+station modules have hp and shields individually
+
+sensors, weapons, and engines should be targetable somehow?
+
+ships
+    integrated systems (immutable from build)
+        size attribute (not system)
+        hull: sized, hp total
+        weapon and shield slots: sized
+        generator: sized
+            energy buffer
+            gen rate
+        command compartment
+            holds personnel and ship controls
+            life support
+            tuned ansible
+        storage bay: sized
+        propulsion
+            reaction engines
+                chemical
+                ion
+                plasma
+                nuclear
+                antimatter
+            solar sail
+            size
+            thrust
+            exhaust velocity
+            fuel
+        optional:
+            science lab: sized
+            docking bay: carriers, Medium carry only XS, Large: XS, S, Extra Large: XS, S, M
+    components: sized
+        shield: plasma control field
+            hp total
+            recharge rate/delay
+        sensors
+            radar: remote sensing, 1 km resolution at 1 AU
+            microwave: deep space point-point communication
+            telescopes: sensing radiation sources of ranges of wavelengths
+            everything has a diameter/radius value for sensing
+        weapons
+            projectiles: low range, high hull damage,
+                    strong against small ships and missiles
+            missiles: medium range, low shield damage,
+                    very high hull damage, ineffective against small ships
+            energy: high range, high shield damage,
+                    high precision (used for component targeting)
+            range-dependent accuracy
+            tracking-dependent accuracy
+            shield/hull damage
+space ship travel
+    switch between orbits and unbound trajectories
+        leaving the bounds of an orbiter (leaving a planet, but could also be a moon or something)
+            use velocity and focus of planet
+            use position of ship
+        leaving the bounds of a star
+            accelerate to hyperbolic orbit (e>1)
+            switch to unfocused at point where acceleration is negligible
+        entering the bounds of an object
+    thrusts
+        impulse: instant simple dv calculation (usually rocket equation)
+        finite: calculated as unfocused-thrusting trajectory
+        https://en.wikipedia.org/wiki/Tsiolkovsky_rocket_equation
+        https://en.wikipedia.org/wiki/Spacecraft_propulsion#Table_of_methods
+    types of trajectories possible
+        orbit
+        hyperbolic
+        unfocused-free
+        unfocused-thrusting
+    maneuvers
+        https://en.wikipedia.org/wiki/Orbital_maneuver
+        Hohmann transfer
+            impulse thrust to boost to desired apoapsis
+            impulse thrust to reach desired eccentricity
+            can switch from/to planetary orbit at start and ending orbits
+        gravity assist
+            https://en.wikipedia.org/wiki/Gravity_assist
+        two-burn maybe for escaping stars
+            https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20100033146.pdf
+            https://en.wikipedia.org/wiki/Oberth_effect
+    goals to be accomplished with maneuvers
+        match orbit to another
+        escape star in direction of destination system
+        leaving planetary orbit
+stations
+    modules: sized
+        core module (immutable from build)
+            basic docking bay (not module sub-class)
+        docking bay
+        storage bay
+        shipyard (station)
+        science lab (understanding)
+        tech lab (tech)
+        admin office (automatic control center)
+    components: sized
+        shields: per module
+        weapons: any size
+        sensors: any size
+        generators: any size
